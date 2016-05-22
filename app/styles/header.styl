@@ -1,0 +1,269 @@
+@charset "utf-8";
+@import "nib"
+@import "_vars.styl"
+@import "fonts.styl"
+/*RESET BROWSER'S STYLES*/
+global-reset()  //reset.css
+
+/*BASIC STYLES*/
+.clearfix
+  clearfix()
+
+* 
+  box-sizing border-box
+  
+html
+  font-size 100%
+  
+body
+  min-width 320px
+  color $base-font-color
+  font-size $base-font-size
+  line-height 1.6
+  font-family: "RalewayRegular", sans-serif
+  overflow-x: hidden
+  font-smoothing antialiased
+  scroll-behavior: smooth
+
+/*============================================*/
+
+//Custom Styles Here
+//menu mobile
+.toggle-mnu 
+  position relative
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 14px
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+  &.on span 
+    background-color: transparent
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+    
+.main-mnu
+  position absolute
+  left -186px
+  z-index 5
+  padding 15px
+  box-shadow: inset 0 -2px 0 0 #1f2a36;
+  &-top
+    top 40px
+    display none
+    background-color: rgba(36,51,67,.8);
+  &-bottom
+    top -320px
+    display none
+    background-color: rgb(36, 51, 67);
+  a
+    color aliceblue
+    font-family: "RalewayRegular", sans-serif
+    font-size 20px
+    line-height 48px   
+/*mobile menu end*/
+
+
+a, button
+  transition: all .5s ease;
+
+.before
+  content ''
+  top 0
+  left 0
+  position absolute
+  width 100%
+  height 100%
+
+.main-head
+  position relative
+  background-image url('/img/header_bg.jpg')
+  background-repeat no-repeat
+  background-position center
+  background-size cover
+  &::before
+    @extend .before
+    opacity .85
+    background-color #394b5f
+    z-index 1
+  &::after
+    @extend .before
+    height auto
+    min-height 160px
+    background-image url('/img/top_gradient.png')
+    background-repeat repeat-x
+    z-index 2
+
+.block-header
+  position relative
+  padding-top 48px
+  z-index 3
+  
+.logo
+  width 100px
+  height 48px
+    
+.menu
+  height 48px
+  margin-bottom 106px
+  ul
+    list-style none
+    li
+      display inline-block
+      margin-right 11px
+      &:last-of-type
+        margin-right 0
+      a
+        color $main-color
+        text-decoration none  
+        font-size 14px
+        line-height 48px
+        vertical-align middle
+        &:hover
+          color $link-active
+          text-decoration underline
+.active
+  color $link-active !important
+  text-decoration underline !important
+  
+.tel
+  display inline-block
+  width 100%
+  color $main-color
+  text-align right
+  font-family: "RobotoBold", sans-serif
+  font-size 20px
+  line-height 48px
+  vertical-align middle
+
+.gamburger
+  line-height 48px
+  font-size 20px
+  color $main-color
+  
+.order-form
+  width 100%
+  margin-bottom 123px
+  padding 25px 31px 41px
+  background-color rgba(36, 51, 67, 0.8)
+  box-shadow inset 0 -2px 0 0 #1F2A36
+  .header
+    margin-bottom 26px
+    color $main-color
+    font-family: "PFCentroSlabProMedium", sans-serif
+    font-size 26px
+  p
+    margin 2px 0
+    color #97A4B2
+    font-size 14px
+    line-height 1.4
+    &:nth-of-type(n+2)
+      margin 26px 0 6px
+  input
+    width 100%
+    box-shadow inset 0 2px 0 0 #1F2A36
+    border none
+    background-color #34465A
+    &:focus
+      outline-color $link-active
+  button
+    margin-top 42px
+    
+button
+  width 180px
+  margin auto
+  padding 7px 0
+  display block
+  color #201A11
+  font-family "PFCentroSlabProBold", sans-serif
+  background-color $link-active
+  box-shadow inset 0 -2px 0 0 #B97200
+  border none
+  &:hover
+    background-color $btn-hover
+    
+.button 
+  @extend button
+  display inline-block
+  width auto
+  padding-left 24px
+  padding-right 24px
+  color black !important
+  text-decoration none !important
+    
+.btn-wild-sect
+  width 100%
+  padding 65px 0
+
+.btn-narrow
+  font-size 22px
+    
+.logo-text 
+  margin-top 112px
+  h1
+    margin-bottom 39px
+    color $main-color
+    font-size 47px
+    font-family "PFCentroSlabProMedium", sans-serif
+    border-bottom 7px solid $link-active
+  ul
+    padding-left 22px
+    list-style none
+    li
+      position relative
+      margin-bottom -3px
+      &:before
+        content ''
+        position absolute
+        top 14px
+        left -22px
+        width: 0px;
+        height: 0px;
+        border-top: 5px solid transparent;
+        border-left: 15px solid $link-active;
+        border-bottom: 5px solid transparent;
+      a
+        color $main-color
+        font-size 17px
+        font-family "RalewaySemiBold", sans-serif
+        
+.arrow-down
+  position relative
+  bottom 84px
+  width 40px
+  height 40px
+  border-radius 50%
+  background-image url('/img/arrow_down.png')
+  opacity .5
+  transition opacity .5s ease
+  cursor pointer
+  &:hover
+    opacity 1
+  
+
+
+/*============================================*/
+/*always bottom*/
+.hidden
+	display none !important

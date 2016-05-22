@@ -1,0 +1,558 @@
+@charset "utf-8";
+
+@import "nib"  //mixins for stylus
+@import "boilerplate.css"
+@import "_vars.styl"
+@import "fonts.styl"
+
+//Load libs
+@import "../assets/libs/animate.css/animate.min.css"
+@import "../assets/libs/owl.carousel/assets/owl.carousel.css"
+@import "../assets/libs/magnific-popup/dist/magnific-popup.css"
+//@import "../assets/libs/font-awesome/css/font-awesome.min.css"
+//@import "../assets/libs/jQuery.mmenu-master/dist/css/jquery.mmenu.all.css"
+
+
+/*Custom Styles Here*/
+.opacityTrue
+  opacity 0
+
+.sect
+  position relative
+  width 100%
+  padding-top 93px
+  text-align center
+  &::before
+    content ''
+    position absolute
+    top -6px
+    left 0
+    z-index 2
+    width 100%
+    height 20px
+    background-image url(/img/bah_1.png)
+    background-repeat repeat-x
+  .sect-cont
+    margin-bottom 10px
+  h1,h2
+    font-family "PFCentroSlabProMedium", sans-serif
+    font-size 30px
+    color $h1
+    text-transform uppercase
+  h2
+    font-size 24px
+  .h2
+    margin 40px 0
+  h3
+    margin-bottom 25px
+    line-height 23px
+    font-weight 500
+  hr
+    border-color #b7b7b7
+  .hr-fat
+    display block
+    width 165px
+    height 4px
+    margin-top 19px
+    margin-bottom 13px
+    background-color $link-active
+  p
+    font-family "RalewayRegular", sans-serif
+    font-size 15px
+    color #535353
+  .sect-cont
+    padding 0 54px
+    strong
+      font-weight 700
+  a
+    color $link-active
+    text-decoration underline
+    &:hover
+      text-decoration none  
+
+/*блок независимая оценка*/
+.score
+  background-color #F9F9F9
+  background-image url(/img/icons/section_1/scales.svg), url(/img/s1_gray_bg.png) 
+  background-repeat no-repeat,no-repeat
+  background-position 50% 54.5%, 50% 43%
+  background-size 165px 175px, auto auto
+  .btn-sect-color
+    background-color #2C3949
+    
+  
+.coll-outside
+  margin-top 102px
+  padding 0 20px 0 34px
+  text-align left
+  div:first-child
+    margin-bottom 126px
+  
+.coll-middle
+  margin-top 48px
+  padding 0 60px
+  text-align left
+  
+.coll2 p
+  line-height 17px
+   
+.triangle  
+  height 100px
+  background-image url(/img/logo.png), url(/img/s1_triangle.svg)
+  background-repeat no-repeat,no-repeat
+  background-position 50% 38%, 50% 0
+  background-size 103px 55px, auto auto
+  
+.block-round-bottom
+  padding-bottom 51px
+  background-color #394B5F
+  
+.coll-outside-bottom
+  margin-top 20px
+  padding 0 20px 0 34px
+  text-align left
+  p
+    color $main-color
+    padding-right 10px
+  
+.coll-middle-bottom
+  margin-top 61px
+  padding 0 54px
+  text-align left
+  p
+    color $main-color
+    padding-right 10px
+  
+.section-bottom
+  height 173px
+  width 100%
+  padding 19px
+  background-color $h1
+  button
+    width 230px
+  
+
+/*блок Сделки M&A*/
+.services
+  margin-bottom 20px
+  &-item
+    display inline-block
+    width 185px
+    padding 15px
+    margin-bottom 45px
+    vertical-align top
+    opacity 0
+    transition all .5s ease
+    transform translateY(-25px)
+    &.on
+      opacity 1
+      transform translateY(0)
+    img
+      height 85px
+    hr
+      margin-top 31px
+      margin-bottom 10px
+      width 58px
+      border 1px solid $link-active
+    p 
+      line-height 19px
+      font-size 13px
+      a
+        color $base-font-color
+        font-family 'RalewayBold', sans-serif
+        text-decoration underline
+        &:hover
+          text-decoration none
+          
+.sect-services .btn-sect-color
+  background-color #E5E5E5
+
+/*accounting services*/
+.acc-item
+    opacity 0
+    transition all .5s ease
+    transform scale(0)
+    &.on
+      opacity 1
+      transform scale(1)
+
+.acc-bg
+  background-image url(/img/s3_sun_bg.png)
+  background-repeat no-repeat
+  background-size auto auto
+  background-position 50% 14%
+  
+.sect:nth-of-type(3)
+  background-color $h1
+  &:before
+    background-image url(/img/bah_2.png)
+  h2
+    color $main-color
+  p
+    color $main-color
+  .acc-coll-outside-left
+    margin 144px 0px 0px 47px
+    text-align left
+    .sect1
+      padding-left 84px
+    .sect2
+      padding-top 91px
+      padding-right 30px
+    .sect3
+      padding-top 118px
+  .acc-coll-middle
+    margin-top 62px
+    padding-left 39px
+    padding-right 39px
+    text-align left
+    .sect4
+      padding-top 216px
+      margin-bottom 108px
+    .round
+      margin auto
+      margin-top 204px
+      width 135px
+      height 135px
+      border-radius 50%
+      background-color $link-active
+      background-image url(/img/icons/section_3/folder.svg)
+      background-size 56%
+      background-repeat no-repeat
+      background-position center
+  .acc-coll-outside-right
+    margin 144px 0px 0px 8px
+    text-align left
+    .sect5
+      padding-left 0px
+      padding-right 118px
+    .sect6
+      padding 131px 37px 3px 85px
+    .sect7
+      padding-top 104px
+      padding-right 88px
+     
+.sect-services 
+  background-color #F9F9F9
+  
+.accounting .btn-sect-color
+  background-color #394B5F
+
+/*блок Преимущества*/
+.cards
+  width 100%
+  margin-top 50px
+  margin-bottom 59px
+  padding 0 10px
+  perspective 600px
+  .card
+    width 23%
+    min-width 230px
+    margin 0 14px 10px
+    display inline-block
+    padding 55px 25px 38px
+    background-color $h1
+    vertical-align top
+    &-on
+      opacity 1
+      transition all 1s ease
+    &-off
+      opacity 0
+      transform rotateY(100deg)
+      transition all 1s ease
+    div
+      margin auto
+      width 122px
+      height 122px
+      border-radius 50%
+      background-color $link-active
+      background-size 56%
+      background-repeat no-repeat
+      background-position center
+    &:first-child div
+      background-image url(/img/icons/section_4/1.svg)
+    &:nth-child(2) div
+      background-image url(/img/icons/section_4/2.svg)
+    &:last-child div
+      background-image url(/img/icons/section_4/3.svg)
+    span
+      display inline-block
+      width 100%
+      margin 19px 0
+      color $main-color
+      font-family 'RalewayBold', sans-serif
+      font-size 16px
+      text-transform uppercase
+    p
+      font-family 'RalewayRegular', sans-serif
+      font-size 14px
+      color #8C99A6
+      span
+        display inline
+        color $link-active
+        font-family 'RalewayBold', sans-serif
+        font-size 14px
+      
+.deal
+  background-color #E5E5E5
+  .btn-sect-color
+    background-color #D6D6D6
+
+/*блок Как мы работаем*/
+.bg-dark.sect:before
+  background-image url(/img/bah_2.png)
+  
+.bg-dark
+  background-color $h1
+  h2
+    color $main-color
+  .btn-sect-color
+    background-color #394B5F
+
+.triangles-container
+  color: $main-color
+  font-family: "PFCentroSlabProMedium", sans-serif
+  font-size: 19px
+  margin: 49px 0 89px
+  text-align: center
+  .tc-item
+    width: 290px
+    height: 128px
+    display: inline-block
+    position: relative
+    margin-left: -45px
+    vertical-align: top
+    cursor: default
+    transition: all .5s ease
+    &:first-child
+      margin-left: 0
+      .tc-content
+        margin-left: 50px
+    &:hover
+      transform: scale(1.08)
+      z-index: 3
+      path
+        fill-opacity: 0!important
+        stroke-opacity: 1!important
+    svg
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 0
+    .tc-content
+      position: relative
+      z-index: 1
+      margin-top: 43px
+      margin-left: 60px
+      text-align: left
+      padding-left: 40px
+      opacity: 0
+      transition: all 1s ease
+      &-on
+        opacity: 1
+      span
+        font-size: 20px
+        margin-left: -22px
+        position: absolute
+      img
+        height: 40px
+        float: left
+        margin-left: -40px
+        margin-right: 32px      
+
+
+ /*С кем можно связаться*/
+.cont
+  background-color #F9F9F9
+  .card
+    background-color #E5E5E5
+    border-bottom 5px solid #D6D6D6
+    div
+      margin-bottom 36px
+      background-color #D6D6D6
+      background-size 100%
+      background-repeat no-repeat
+      background-position center
+      border 5px solid #D6D6D6
+    &:first-child div
+      background-image url(/img/team/1.jpg)
+    &:nth-child(2) div
+      background-image url(/img/team/2.jpg)
+    &:last-child div
+      background-image url(/img/team/3.jpg)
+    p
+      color #333333
+      font-family 'RalewayBold', sans-serif
+      font-size 16px
+      &:last-child
+        font-family 'RobotoBold', sans-serif
+    span
+      margin 9px 0
+      color #6E7B8B
+      font-family 'RalewayRegular', sans-serif
+      font-size 13px
+      text-transform none
+  .btn-sect-color 
+    background-color #E5E5E5
+      
+      
+/*Отзывы*/
+.reviews
+  background-color #E5E5E5 
+  &.sect:before
+    background-image url(/img/bah_3.png)
+  .slider
+    position relative
+    width 100%
+    max-width 975px
+    margin auto
+    margin-bottom 62px
+    .item
+      text-align center
+      padding 0 55px 38px
+      img
+        margin auto
+        display block
+        margin-top 31px
+        margin-bottom 20px
+        width 150px
+        height 150px
+        border-radius 50%
+        border 8px solid $link-active
+      h3
+        margin-bottom 4px
+        text-transform none
+        font-family 'RalewayBold', sans-serif
+        font-size 18px
+      p:first-of-type
+        margin-bottom 8px
+        color #6E7B8B
+    .owl-item
+      img, h3, p:first-of-type
+        opacity 0
+        transform translate3d(200px, 0, 0)
+        transition all .5s ease
+      &.active 
+        img, h3, p:first-of-type
+          opacity 1
+          transition all .5s ease
+          transform translate3d(0, 0, 0)
+          transition-delay .3s
+        h3
+          transition-delay .2s 
+        p:first-of-type
+          transition-delay .1s 
+    .owl-controls
+      text-align: center
+      .owl-dot
+        width: 15px
+        height: 15px
+        margin: 0 3px
+        background-color: #ccc
+        display: inline-block
+        border-radius: 10em
+        &.active
+          background-color: $link-active
+      .owl-nav
+        position: absolute
+        top: 24%
+        width: 100%
+        > div
+          height: 29px
+          width: 16px
+          background-image: url(/img/slider_arrows.png)
+          position: absolute
+          left: 20px
+          opacity: .5
+          transition: all .25s ease
+          &:hover
+            opacity: 1
+        .owl-next
+          right: 20px
+          left: auto
+          background-position: -16px 0
+      
+   
+/*Мы - профессионалы! */
+.proff
+  text-align left
+  background-color #F9F9F9 
+  &-item
+    opacity 0
+    transition all .5s ease
+    transform translate3d(0,200px,0)
+    &.on
+      opacity 1
+      transform translate3d(0,0,0)
+  &-item2
+    opacity 0
+    transition all .5s ease
+    transform translateY(-25px)
+    &.on
+      opacity 1
+      transform translateY(0)
+  h2
+    margin-top 0
+    color $h1
+  hr
+    margin-left 0
+  .awards
+    margin-top 10px
+    text-align center
+    div
+      display inline-block
+      width 24%
+      min-width 140px
+      vertical-align top
+      img
+        margin auto
+        margin-bottom 24px
+        margin-top 25px
+        height  77px
+      p
+        font-family 'RalewayBold', sans-serif
+        font-size 13px
+        line-height 16px
+  .order-form
+    background-color #DDDDDD
+    box-shadow inset 0 -2px 0 0 #828282
+    .header
+      color $h1
+    p
+      color #6E7B8B
+    input
+      box-shadow inset 0 2px 0 0 #828282
+      background-color #C0C0C0
+      &:focus
+        outline-color $link-active
+
+      
+.footer
+  padding-top 81px
+  background-color #2C3949
+  &.sect:before
+    background-image url(/img/bah_2.png)
+  .opacity
+    opacity .7
+    .ta-left
+      text-align left
+    .menu
+      margin-bottom 58px
+  .sect-bottom
+    height 40px
+    background-color #1F2B3A
+    img
+      margin auto
+      cursor pointer
+      
+.main-mnu a
+  color aliceblue
+  text-decoration none
+      
+/*скрытая форма*/
+.form-pop-up
+  max-width 300px
+  margin auto
+    
+
+//ALWAYS END
+@import "_media.styl"

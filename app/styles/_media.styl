@@ -1,0 +1,168 @@
+@import "nib"
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+  .tel {
+    font-size 15px
+  }
+  
+  .sect .sect-cont {
+    padding 0
+  }
+  
+  .score {
+    background-position: 50% 51.8%,50% 43%;
+  }
+  
+  
+  .coll-outside div:first-child {
+    margin-bottom: 90px;
+  }
+} 
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+  .order-form {
+    width 100%
+    margin auto
+    margin-top 20px
+    margin-bottom 44px
+  }
+  
+  .arrow-down {
+    bottom 26px  
+  }
+  
+  .sect {
+    padding-top 47px
+  }
+  
+  .coll-outside {
+    margin-top 14px
+    padding 0
+    div:first-child {
+      margin-bottom: 29px;
+    }
+  }
+  
+  .coll-middle {
+    margin-top 34px
+    padding 0
+  }
+  
+  .score {
+    background-image: url(),url(/img/s1_gray_bg.png);
+  }
+  
+  .coll-outside-bottom {
+    margin-top: 20px;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .coll-middle-bottom {
+    margin-top: 33px;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .acc-bg {
+    background-size 100%
+  }
+  
+  .sect:nth-of-type(3) {
+    .acc-coll-outside-left {
+      margin 35px 0 0 0 
+      .sect1 {
+        padding 0
+      }
+      .sect2 {
+        margin-top 32px
+        padding 0
+      }
+      .sect3 {
+        padding-top 30px
+      }
+    }
+    .acc-coll-middle {
+      margin-top 30px 
+      padding 0
+      .round {
+        display  none
+      }
+      .sect4 {
+        margin-bottom 0
+        padding-top 30px
+      }
+    }
+    .acc-coll-outside-right {
+      margin 30px 0 0 0
+      .sect6 {
+        padding 30px 0 0 0
+      }
+      .sect7 {
+        padding-top 30px
+        padding-bottom 30px
+      }
+    }
+  }
+  
+  .triangles-container .tc-item:nth-of-type(3) {
+    margin-left 0
+  }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  /*Disable Animation on Mobile Devices*/
+  .animated {
+    transition-property: none !important
+    transform: none !important 
+    animation: none !important
+  }
+  
+  .tel {
+    text-align center
+  }
+  
+  .logo-text {
+    margin-top 10px
+  }
+  
+  .cards .card {
+    width 100%
+    margin 0 0 10px
+  }
+}
+  
+  /*other rules*/
+@media only screen and (max-width : 590px) {
+  .triangles-container .tc-item {
+    margin-left 0
+  }
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .btn-narrow {
+    font-size 18px
+  }
+  
+  .cards {
+    padding 0
+    .card {
+      margin: 0 0px 10px;
+    }
+  }
+}
+  /**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+  
+}
+  /**/
